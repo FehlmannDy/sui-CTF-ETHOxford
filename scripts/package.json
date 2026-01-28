@@ -8,7 +8,8 @@
     "init-keypair": "tsx src/init.ts",
     "moving-window": "tsx src/moving_window.ts",
     "merchant": "tsx src/merchant.ts",
-    "lootboxes": "tsx src/lootboxes.ts"
+    "lootboxes": "tsx src/lootboxes.ts",
+    "staking": "tsx src/staking.ts"
   },
   "dependencies": {
     "@mysten/sui": "^1.8.0",

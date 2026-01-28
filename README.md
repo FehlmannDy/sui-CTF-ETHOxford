@@ -18,6 +18,9 @@ Welcome to the Sui Capture the Flag challenge! This CTF is designed to test and 
     - [Instructions](#instructions-1)
   - [Lootboxes Challenge](#lootboxes-challenge)
     - [Instructions](#instructions-2)
+    - [Hints](#hints)
+  - [Staking Challenge](#staking-challenge)
+    - [Instructions](#instructions-3)
 
 ## Environment Setup
 
@@ -118,6 +121,17 @@ Open lootboxes until you get a flag.
 1. Every lootbox has a 1 in 100 chance of containing a flag.
 2. Use this [page](https://docs.sui.io/guides/developer/advanced/randomness-onchain#programmable-transaction-block-ptb-restrictions) to learn more about Sui's on-chain randomness. Especially if you are running into this error: `PostRandomCommandRestrictions`
 3. A mistake has been made in the `lootboxes.move` contract regarding the use of the `Random` object.
+
+## Staking Challenge
+
+Stake SUI tokens to earn the right to claim a flag.
+
+### Instructions
+
+1. Examine the [`staking.move`](./contracts/sources/staking.move) contract carefully.
+2. Understand the staking requirements: you must stake a minimum of 1 SUI for at least 1 week (168 hours).
+3. Implement your solution in [`scripts/src/staking.ts`](./scripts/src/staking.ts).
+4. Run your script with `pnpm run staking` to extract the flag.
 
 ---
 
