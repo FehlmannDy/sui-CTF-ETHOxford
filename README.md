@@ -50,10 +50,24 @@ https://suiscan.xyz/testnet/account/{your-address}
 
 ## Challenges
 
-Challenges will be added to the `challenges/` directory. Each challenge will contain:
-- Move smart contracts in a `sources/` directory
-- A `Move.toml` configuration file
-- Instructions and hints in the challenge README
+All challenges are Move modules within the single `ctf` package located in the `contracts/` directory. This architecture is required because the flag module uses `public(package)` visibility, meaning only modules in the same package can create flags.
+
+### Structure
+
+```
+contracts/
+├── Move.toml          # Package: ctf
+└── sources/
+    ├── flag.move      # Base flag module
+    └── ...            # Challenge modules will be added here
+```
+
+### Adding Challenges
+
+Each challenge will be a new Move module file in `contracts/sources/`. Challenge modules can:
+- Import the flag module with `use ctf::flag;`
+- Create flags when solved with `flag::new(b"challenge_name".to_string(), ctx)`
+- Access other challenge modules in the same package
 
 Check back soon for exciting challenges!
 

@@ -1,0 +1,6 @@
+[package]
+name = "ctf"
+edition = "2024.beta" 
+
+[addresses]
+ctf = "0x0"
