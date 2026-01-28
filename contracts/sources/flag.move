@@ -1,20 +1,20 @@
-module ctf::flag {
-  use std::string::String;
+module ctf::flag;
 
-  public struct Flag has key, store {
-    id: UID,
-    source: String
-  }
+use std::string::String;
 
-  public(package) fun new(source: String, ctx: &mut TxContext): Flag {
-    Flag {
-      id: object::new(ctx),
-      source
-    }
-  }
+public struct Flag has key, store {
+  id: UID,
+  source: String
+}
 
-  public fun delete(flag: Flag) {
-    let Flag { id, source: _ } = flag;
-    object::delete(id);
+public(package) fun new(source: String, ctx: &mut TxContext): Flag {
+  Flag {
+    id: object::new(ctx),
+    source
   }
+}
+
+public fun delete(flag: Flag) {
+  let Flag { id, source: _ } = flag;
+  object::delete(id);
 }
