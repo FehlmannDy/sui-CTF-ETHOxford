@@ -1,7 +1,6 @@
 
 
-const main = async () => {
+(async () => {
   // Put your script here
-};
-
-main();
+  
+})();
