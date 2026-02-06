@@ -1,5 +1,5 @@
 import { Ed25519Keypair } from "@mysten/sui/keypairs/ed25519";
-import { sleep, writeToFile } from "./helpers.js";
+import { sleep, writeToFile } from "./helpers.ts";
 
 const main = async () => {
   console.log("Generating KeyPair...");
@@ -21,9 +21,7 @@ const main = async () => {
   console.log(
     `\nView your Sui account at https://suiscan.xyz/testnet/account/${publicAddress}`
   );
-  console.log("\nNext, please request tokens from alternative faucets:");
-  console.log("- https://faucet.n1stake.com/");
-  console.log("- https://faucet.sui.io/");
+  console.log("\nNext, see README.md for instructions on getting testnet tokens");
 };
 
 main();

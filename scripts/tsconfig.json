@@ -1,15 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "noEmit": true, 
     "resolveJsonModule": true,
+    "target": "es2016",
+    "module": "nodeNext",
+    "moduleResolution": "nodeNext",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true
+    "strict": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
 }
