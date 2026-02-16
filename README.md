@@ -1,3 +1,15 @@
+# CTF Response
+
+On this link you can see my personnal wallet with de 4 flags of the CTF below.
+
+https://suiscan.xyz/testnet/account/0x8630bd74a333a20157dd7921054d1d19f8696fa7b53e1594efcb868ab808f223/portfolio
+
+Tools :
+- https://faucet.sui.io/hackathon
+- https://docs.sui.io/guides/developer/on-chain-primitives/randomness-onchain
+- https://github.com/FehlmannDy/sui-object-model-workshop
+
+
 # Sui CTF
 
 Welcome to the Sui Capture the Flag challenge! This CTF is designed to test and improve your understanding of Sui Move smart contracts, the Sui object model, and Programmable Transaction Blocks (PTBs).
